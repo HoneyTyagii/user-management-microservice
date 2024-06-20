@@ -81,6 +81,42 @@ $ npm run test:cov
 # DELETE /block/:userId/:blockedUserId - Unblock a user.
 ```
 
+## Example Requests
+
+```bash
+1. Create User:
+   curl -X POST \
+   http://localhost:3000/users \
+   -H 'Content-Type: application/json' \
+   -d '{
+    "name": "John",
+    "surname": "Doe",
+    "username": "johndoe",
+    "birthdate": "1990-01-01"
+    }'
+
+2. Get All Users:
+   curl -X GET \
+   http://localhost:3000/users
+
+3. Search Users:
+   # Search by username
+   curl -X GET \
+   'http://localhost:3000/users/search?username=johndoe'
+
+   # Search by username and age range
+   curl -X GET \
+   'http://localhost:3000/users/search?username=johndoe&minAge=30&maxAge=40'
+
+4. Block User:
+   curl -X POST \
+   http://localhost:3000/block/userId/blockUserId
+
+5. Unblock User:
+   curl -X DELETE \
+   http://localhost:3000/block/userId/blockUserId
+```
+
 ## Support
 
 Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
