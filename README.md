@@ -45,6 +45,12 @@ $ npm run start:dev
 $ npm run start:prod
 ```
 
+## Configure Environment Variables
+
+```bash
+# MONGODB_URI=mongodb://localhost:27017/mydatabase
+```
+
 ## Test
 
 ```bash
@@ -56,6 +62,23 @@ $ npm run test:e2e
 
 # test coverage
 $ npm run test:cov
+```
+
+## Use Endpoints
+
+```bash
+1. User Endpoints:
+
+# POST /users - Create a new user.
+# GET /users - Retrieve all users.
+# GET /users/:id - Retrieve a user by ID.
+# PUT /users/:id - Update a user by ID.
+# DELETE /users/:id - Delete a user by ID.
+# GET /users/search - Search users by username and/or age range.
+
+2. Block Endpoints:
+# POST /block/:userId/:blockedUserId - Block a user.
+# DELETE /block/:userId/:blockedUserId - Unblock a user.
 ```
 
 ## Support
